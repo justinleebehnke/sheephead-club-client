@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sheephead_client/widgets/card_widget.dart';
+import 'package:sheephead_client/widgets/player_widget.dart';
 import 'signup_page.dart'; // You'll create this in the next step.
 
 class LoginPage extends StatefulWidget {
@@ -55,6 +57,38 @@ class _LoginPageState extends State<LoginPage> {
               },
               child: const Text('Don’t have an account? Sign up'),
             ),
+            const Row(
+              children: [
+                CardWidget(cardIdentifier: 'QC'),
+                CardWidget(cardIdentifier: 'QH')
+              ],
+            ),
+            Row(children: [
+              PlayerWidget(
+                username: 'Jesse',
+                score: 10,
+                isPicker: false,
+                isDealer: true,
+                isTheirTurn: true,
+                isChopped: false,
+              ),
+              PlayerWidget(
+                username: 'John',
+                score: 14,
+                isPicker: true,
+                isDealer: true,
+                isTheirTurn: true,
+                isChopped: true,
+              ),
+              PlayerWidget(
+                username: 'Jose De Maria Izazaga',
+                score: 14,
+                isPicker: true,
+                isDealer: false,
+                isTheirTurn: false,
+                isChopped: false,
+              ),
+            ])
           ],
         ),
       ),
