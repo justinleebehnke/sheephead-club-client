@@ -27,7 +27,7 @@ class GameBoard extends StatelessWidget {
             alignment: Alignment.center,
             transform: matrix,
             child: Transform.scale(
-              scale: 1.25,
+              scale: 1.75,
               child: Image.asset(
                 'assets/green-textile-texture.jpg',
                 fit: BoxFit.cover,
@@ -39,15 +39,15 @@ class GameBoard extends StatelessWidget {
           ShaderMask(
             shaderCallback: (Rect bounds) {
               return const RadialGradient(
-                center: Alignment.center,
-                radius: 0.65,
+                center: Alignment.bottomCenter,
+                radius: 1.5,
                 colors: [Colors.transparent, Colors.black],
-                stops: [0.1, 0.75],
+                stops: [0.75, .85],
               ).createShader(bounds);
             },
             blendMode: BlendMode.darken,
             child: Container(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withOpacity(0.01),
             ),
           ),
           Container(
@@ -74,11 +74,10 @@ class GameBoard extends StatelessWidget {
                       Expanded(
                         flex: 1,
                         child: Container(
-                          alignment: Alignment.topCenter,
+                          alignment: Alignment.topRight,
                           child: const Text('Hands played: 12'),
                         ),
-                      ),
-                      const Expanded(flex: 1, child: SizedBox(width: 1))
+                      )
                     ],
                   ),
                   TableTop(
