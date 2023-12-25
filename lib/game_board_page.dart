@@ -17,10 +17,9 @@ class GameBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.redAccent,
       body: Container(
         padding: const EdgeInsets.all(12),
-        decoration: const BoxDecoration(color: Colors.amber),
+        decoration: const BoxDecoration(color: Colors.blueGrey),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -36,15 +35,19 @@ class GameBoard extends StatelessWidget {
                           print(
                               'User has chosen to leave after the current hand.');
                         },
-                        child: Text('Last hand'),
+                        child: const Text('Last hand'),
                       ),
                     ),
                   ),
                   Container(
-                    alignment: Alignment.topLeft,
-                    child: Expanded(flex: 1, child: playerWidgets[1]),
-                  ),
-                  const Expanded(flex: 1, child: SizedBox(width: 1.0))
+                      alignment: Alignment.topLeft, child: playerWidgets[1]),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      alignment: Alignment.topCenter,
+                      child: const Text('Hands played: 12'),
+                    ),
+                  )
                 ],
               ),
               Row(
@@ -58,14 +61,20 @@ class GameBoard extends StatelessWidget {
                   playerWidgets[2],
                 ],
               ),
-              const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                CardWidget('8C'),
-                CardWidget('9C'),
-                CardWidget('TC'),
-                CardWidget('AC'),
-                CardWidget('8C'),
-                CardWidget('9C'),
-              ]),
+              const Column(
+                children: [
+                  Text('bottom'),
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    CardWidget('8C'),
+                    CardWidget('9C'),
+                    CardWidget('TC'),
+                    CardWidget('AC'),
+                    CardWidget('8C'),
+                    CardWidget('9C'),
+                  ]),
+                  Text('Score: 12')
+                ],
+              )
             ]),
       ),
     );
