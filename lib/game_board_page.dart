@@ -24,9 +24,22 @@ class GameBoard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const SizedBox(height: 10.0),
+                Positioned(
+                  bottom: 20, // Adjust the position as needed
+                  left: 0,
+                  right: 0,
+                  child: Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        print(
+                            'User has chosen to leave after the current hand.');
+                      },
+                      child: Text('Leave'),
+                    ),
+                  ),
+                ),
                 playerWidgets[1],
-                const SizedBox(height: 10.0)
+                const SizedBox(width: 130.0)
               ],
             ),
             const SizedBox(height: 10.0),
