@@ -20,14 +20,6 @@ class PlayerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.black,
-          width: 1.0,
-        ),
-        borderRadius: BorderRadius.circular(8.0),
-        color: isTheirTurn ? Colors.yellow : Colors.white,
-      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
