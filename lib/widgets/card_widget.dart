@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CardWidget extends StatelessWidget {
   final String cardIdentifier;
 
-  const CardWidget({super.key, required this.cardIdentifier});
+  const CardWidget(this.cardIdentifier, {super.key});
 
   String getSuitSymbol() {
     final suit = cardIdentifier.substring(cardIdentifier.length - 1);

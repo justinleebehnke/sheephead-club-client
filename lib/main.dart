@@ -56,38 +56,31 @@ class MyApp extends StatelessWidget {
         ),
         home: GameBoard(
           cardsOnBoard: const [
-            CardWidget(cardIdentifier: 'QC'),
-            CardWidget(cardIdentifier: 'QC'),
+            CardWidget('QC'),
+            CardWidget('QC'),
           ],
           playerWidgets: [
             PlayerWidget(
-                username: 'host',
+                username: 'left',
                 score: 0,
                 isDealer: false,
                 isPicker: false,
                 isTheirTurn: false,
                 isChopped: false),
             PlayerWidget(
-                username: '1',
+                username: 'across',
                 score: 0,
                 isDealer: false,
                 isPicker: false,
                 isTheirTurn: false,
                 isChopped: false),
             PlayerWidget(
-                username: '2',
+                username: 'right',
                 score: 0,
                 isDealer: false,
                 isPicker: false,
                 isTheirTurn: false,
                 isChopped: false),
-            PlayerWidget(
-                username: '3',
-                score: 0,
-                isDealer: false,
-                isPicker: false,
-                isTheirTurn: false,
-                isChopped: false)
           ],
           isWaitingForPlayers: false,
         ));

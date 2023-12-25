@@ -58,10 +58,7 @@ class _LoginPageState extends State<LoginPage> {
               child: const Text('Don’t have an account? Sign up'),
             ),
             const Row(
-              children: [
-                CardWidget(cardIdentifier: 'QC'),
-                CardWidget(cardIdentifier: 'QH')
-              ],
+              children: [CardWidget('QC'), CardWidget('QH')],
             ),
             Row(children: [
               PlayerWidget(
