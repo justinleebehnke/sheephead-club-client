@@ -51,7 +51,7 @@ class CardWidget extends StatelessWidget {
             Text(
               getRank() + getSuitSymbol(),
               style: TextStyle(
-                  fontSize: 32.0,
+                  fontSize: 22.0,
                   fontWeight: FontWeight.bold,
                   color: getColor()),
             ),
