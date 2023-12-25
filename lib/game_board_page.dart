@@ -27,9 +27,9 @@ class GameBoard extends StatelessWidget {
             alignment: Alignment.center,
             transform: matrix,
             child: Transform.scale(
-              scale: 1.75,
+              scale: 1.5,
               child: Image.asset(
-                'assets/green-textile-texture.jpg',
+                'assets/dark-green-wall.jpg',
                 fit: BoxFit.cover,
                 width: double.infinity,
                 height: double.infinity,
