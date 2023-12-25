@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sheephead_client/game_board_page.dart';
-import 'package:sheephead_client/login_page.dart';
-import 'package:sheephead_client/widgets/card_widget.dart';
 import 'package:sheephead_client/widgets/player_widget.dart';
 
 void main() {
@@ -55,10 +53,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         home: GameBoard(
-          cardsOnBoard: const [
-            CardWidget('QC'),
-            CardWidget('QC'),
-          ],
+          cardsOnBoard: const ['JD', 'QC', 'TD', 'AS'],
           playerWidgets: [
             PlayerWidget(
                 username: 'left',

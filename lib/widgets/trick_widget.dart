@@ -15,7 +15,7 @@ class TrickWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> cardWidgets = _getCardWidgetsFromIds(cardIds);
     return SizedBox(
-      width: double.infinity,
+      width: 300,
       height: 300,
       child: Stack(
         children: [
@@ -33,7 +33,7 @@ class TrickWidget extends StatelessWidget {
   }
 
   Widget _positionCard(Widget cardWidget, StartingPosition startingPosition) {
-    const cardOffsetIncrement = 60.0;
+    const cardOffsetIncrement = 53.0;
     const double stackCenterX = 100.0;
     const double stackCenterY = 70.0;
 
