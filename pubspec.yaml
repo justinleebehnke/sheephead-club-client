@@ -59,6 +59,62 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/dark-green-wall.jpg
+    - assets/svgs/1B.svg
+    - assets/svgs/1J.svg
+    - assets/svgs/2B.svg
+    - assets/svgs/2C.svg
+    - assets/svgs/2D.svg
+    - assets/svgs/2H.svg
+    - assets/svgs/2J.svg
+    - assets/svgs/2S.svg
+    - assets/svgs/3C.svg
+    - assets/svgs/3D.svg
+    - assets/svgs/3H.svg
+    - assets/svgs/3S.svg
+    - assets/svgs/4C.svg
+    - assets/svgs/4D.svg
+    - assets/svgs/4H.svg
+    - assets/svgs/4S.svg
+    - assets/svgs/5C.svg
+    - assets/svgs/5D.svg
+    - assets/svgs/5H.svg
+    - assets/svgs/5S.svg
+    - assets/svgs/6C.svg
+    - assets/svgs/6D.svg
+    - assets/svgs/6H.svg
+    - assets/svgs/6S.svg
+    - assets/svgs/7C.svg
+    - assets/svgs/7D.svg
+    - assets/svgs/7H.svg
+    - assets/svgs/7S.svg
+    - assets/svgs/8C.svg
+    - assets/svgs/8D.svg
+    - assets/svgs/8H.svg
+    - assets/svgs/8S.svg
+    - assets/svgs/9C.svg
+    - assets/svgs/9D.svg
+    - assets/svgs/9H.svg
+    - assets/svgs/9S.svg
+    - assets/svgs/AC.svg
+    - assets/svgs/AD.svg
+    - assets/svgs/AH.svg
+    - assets/svgs/AS.svg
+    - assets/svgs/JC.svg
+    - assets/svgs/JD.svg
+    - assets/svgs/JH.svg
+    - assets/svgs/JS.svg
+    - assets/svgs/KC.svg
+    - assets/svgs/KD.svg
+    - assets/svgs/KH.svg
+    - assets/svgs/KS.svg
+    - assets/svgs/QC.svg
+    - assets/svgs/QD.svg
+    - assets/svgs/QH.svg
+    - assets/svgs/QS.svg
+    - assets/svgs/TC.svg
+    - assets/svgs/TD.svg
+    - assets/svgs/TH.svg
+    - assets/svgs/TS.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
