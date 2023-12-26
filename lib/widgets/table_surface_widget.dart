@@ -38,7 +38,7 @@ class TableTop extends StatelessWidget {
               playerWidgets[0],
               TrickWidget(
                   key: key,
-                  startingPosition: StartingPosition.left,
+                  startingPosition: StartingPosition.down,
                   cardIds: cardsOnBoard),
               playerWidgets[2],
               const SizedBox(width: 1),

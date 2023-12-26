@@ -13,19 +13,35 @@ class TrickWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> cardWidgets = _getCardWidgetsFromIds(cardIds);
+    List<StartingPosition> positions = sliceAndRearrange(startingPosition);
+    List<Widget> cards = _getCardWidgetsFromIds(cardIds);
+
     return SizedBox(
       width: 160,
       height: 200,
       child: Stack(
-        children: [
-          _positionCard(cardWidgets[0], StartingPosition.left),
-          _positionCard(cardWidgets[1], StartingPosition.across),
-          _positionCard(cardWidgets[2], StartingPosition.right),
-          _positionCard(cardWidgets[3], StartingPosition.down)
-        ],
+        children: cards
+            .asMap()
+            .map((int index, Widget card) {
+              return MapEntry(index, _positionCard(card, positions[index]));
+            })
+            .values
+            .toList(),
       ),
     );
+  }
+
+  List<StartingPosition> sliceAndRearrange(StartingPosition positionToSplit) {
+    List<StartingPosition> positions = [
+      StartingPosition.left,
+      StartingPosition.across,
+      StartingPosition.right,
+      StartingPosition.down
+    ];
+    int splitIndex = positions.indexOf(positionToSplit);
+    List<StartingPosition> firstHalf = positions.sublist(0, splitIndex);
+    List<StartingPosition> secondHalf = positions.sublist(splitIndex);
+    return secondHalf + firstHalf;
   }
 
   List<Widget> _getCardWidgetsFromIds(List<String> cardIds) {

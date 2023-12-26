@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sheephead_client/widgets/card_widget.dart';
+import 'package:sheephead_client/widgets/hand_widget.dart';
 import 'package:sheephead_client/widgets/player_widget.dart';
 import 'package:sheephead_client/widgets/table_surface_widget.dart';
 
@@ -68,22 +68,14 @@ class GameBoard extends StatelessWidget {
                   ),
                   TableTop(
                       playerWidgets: playerWidgets, cardsOnBoard: cardsOnBoard),
-                  const Column(
-                    children: [
-                      Text('bottom'),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            CardWidget('8_clubs'),
-                            CardWidget('9_clubs'),
-                            CardWidget('10_clubs'),
-                            CardWidget('A_hearts'),
-                            CardWidget('8_diamonds'),
-                            CardWidget('9_spades'),
-                          ]),
-                      Text('Score: 12')
-                    ],
-                  ),
+                  const PlayerHand(cardIdentifiers: [
+                    '8_clubs',
+                    '9_clubs',
+                    '10_clubs',
+                    'A_hearts',
+                    '8_diamonds',
+                    '9_spades',
+                  ])
                 ]),
           )
         ],
