@@ -29,25 +29,11 @@ class GameBoard extends StatelessWidget {
             child: Transform.scale(
               scale: 1.5,
               child: Image.asset(
-                'assets/dark-green-wall.jpg',
+                'assets/dark-green.png',
                 fit: BoxFit.cover,
                 width: double.infinity,
                 height: double.infinity,
               ),
-            ),
-          ),
-          ShaderMask(
-            shaderCallback: (Rect bounds) {
-              return const RadialGradient(
-                center: Alignment.bottomCenter,
-                radius: 1.5,
-                colors: [Colors.transparent, Colors.black],
-                stops: [0.75, .85],
-              ).createShader(bounds);
-            },
-            blendMode: BlendMode.darken,
-            child: Container(
-              color: Colors.black.withOpacity(0.01),
             ),
           ),
           Container(
@@ -88,12 +74,12 @@ class GameBoard extends StatelessWidget {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            CardWidget('8C'),
-                            CardWidget('9C'),
-                            CardWidget('TC'),
-                            CardWidget('AC'),
-                            CardWidget('8C'),
-                            CardWidget('9C'),
+                            CardWidget('8_clubs'),
+                            CardWidget('9_clubs'),
+                            CardWidget('10_clubs'),
+                            CardWidget('A_hearts'),
+                            CardWidget('8_diamonds'),
+                            CardWidget('9_spades'),
                           ]),
                       Text('Score: 12')
                     ],

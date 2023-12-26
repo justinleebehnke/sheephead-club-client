@@ -16,7 +16,7 @@ class TableTop extends StatelessWidget {
   Widget build(BuildContext context) {
     Matrix4 matrix = Matrix4.identity();
     matrix.setEntry(3, 2, 0.001);
-    matrix.rotateX(-0.65);
+    matrix.rotateX(-0.5);
     return Transform(
       alignment: Alignment.center,
       transform: matrix,

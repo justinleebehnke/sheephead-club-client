@@ -57,7 +57,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
         home: GameBoard(
-          cardsOnBoard: const ['JD', 'QC', 'TD', 'AS'],
+          cardsOnBoard: const [
+            'J_diamonds',
+            'Q_clubs',
+            '10_diamonds',
+            'A_spades'
+          ],
           playerWidgets: [
             PlayerWidget(
                 username: 'left',
